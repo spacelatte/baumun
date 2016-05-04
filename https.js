@@ -1,0 +1,3 @@
+if(window.location.protocol != "https:")
+	window.location.protocol = "https";
+// just force to https for all connections...

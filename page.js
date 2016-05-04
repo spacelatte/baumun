@@ -1,0 +1,1 @@
+function fix_images(){for(var t=document.querySelectorAll("[data-img]"),e=0;e<t.length;e++){var a=t[e].getAttribute("data-img");t[e].style.backgroundImage="url('"+a+"')"}}function fix_links(){$('a[href^="#"]').on("click",function(t){var e=$($(this).attr("href"));e.length&&(t.preventDefault(),$("html, body").animate({scrollTop:e.offset().top},999,"easeInOutQuart"))})}
