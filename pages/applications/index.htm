@@ -58,7 +58,19 @@
 			"#id":"//docs.google.com/forms/d/1V4nCu1GOCFPB22323HMmWUYjEf9kBbbiJa8QpHD0Os0/edit?ts=5750af56",
 		};
 		window.onhashchange = function(e) {
-			document.getElementsByClassName('cont')[0].innerHTML = "<iframe src='https:" + forms[e.target.window.location.hash] + "' ></iframe>\n";
+			if(e.target.window.location.hash)
+				document.getElementsByClassName('cont')[0].innerHTML = "<iframe src='https:" + forms[e.target.window.location.hash] + "' ></iframe>\n";
+			return;
+		};
+		window.onload = function(e) {
+			var req = new XMLHttpRequest();
+			req.onload = function(e) {
+				if(this.status != 200)
+					return;
+				document.getElementsByClassName('cont')[0].innerHTML = this.response;			
+			};
+			req.open("GET","./main.htm",true);
+			req.send(null);
 		};
 	</script>
 </html>

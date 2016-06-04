@@ -177,13 +177,34 @@ FOOTER {
 	display:inline-block;
 	border:none;
 }
-
+.cont TABLE {
+	width:80%;
+	display:inline-table;
+	table-layout:fixed;
+}
+.cont TABLE TBODY TR {
+	min-height:10vh;
+}
+.cont TABLE TBODY TD {
+	vertical-align:middle;
+	padding:4px;
+	border:1px solid transparent;
+}
+.cont TABLE TBODY TR TD:hover { border-color:#105CA2; }
+.cont TABLE TBODY TR TD A {
+	display:block;
+	padding:16px;
+	text-decoration:none;
+	font-size:1.6em;
+	color:#105CA2;
+}
 @media (max-width:960px) {
 	BODY { margin:0; }
 	NAV { height:80px; }
 	.tabs { top:80px; margin:0; }
 	.cont { padding:120px 4%; }
 	.tabs + .cont { padding-top:160px; }
+	.cont TABLE { width:100%; }
 	NAV .menu {
 		top:0;
 		transform:translateY(0%);
