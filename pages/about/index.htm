@@ -34,12 +34,23 @@
 			</span>
 		</nav>
 		<div class='tabs' >
-			<a href='#' >academic team</a>
-			<a href='#' >organization team</a>
-			<a href='#' >contact</a>
+			<a href='#./contact.htm' >contact</a>
+			<a href='#./acdteam.htm' >academic team</a>
+			<a href='#./orgteam.htm' >organization team</a>
 		</div>
 		<div class=cont >
-			^ click
+			<br><br>
+			<table>
+				<tbody>
+					<tr>
+						<td colspan=2 ><a href='#contact.htm' >Contact</a></td>
+					</tr>
+					<tr>
+						<td><a href='#acdteam.htm' >Academic Team</a></td>
+						<td><a href='#orgteam.htm' >Organization Team</a></td>
+					</tr>
+				</tbody>
+			</table>
 		</div>
 		<footer class="contact" >
 			&copy; BAU&nbsp;MUN &#39;16
@@ -47,5 +58,28 @@
 	</body>
 	<script type="text/javascript" src="../../lib/jquery-2.2.0.min.js" ></script>
 	<script type="text/javascript" src="../../page.js" ></script>
-	<script></script>
+	<script >
+		var  links = Array.prototype.slice.call(document.getElementsByClassName('tabs')[0].getElementsByTagName('A'));
+		var mlinks = Array.prototype.slice.call(document.getElementsByClassName('cont')[0].getElementsByTagName('A'));
+		links = links.concat(mlinks);
+		for(i=0;i<links.length;i++) {
+			links[i].onclick = function(e) {
+				for(j=0;j<links.length;j++)
+					links[j].removeAttribute("T");
+				this.setAttribute("T","");
+				if( links.indexOf(this) >= mlinks.length )
+					links[ mlinks.indexOf(this) ].setAttribute("T","");
+				var req = new XMLHttpRequest();
+				req.onload = function(e) {
+					if(this.status != 200)
+						return;
+					document.getElementsByClassName('cont')[0].innerHTML = this.response;	
+				};
+				req.open("GET",this.hash.slice(1),true);
+				req.send(null);
+				return false;
+			};
+			continue;
+		};
+	</script>
 </html>
