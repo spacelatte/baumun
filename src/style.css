@@ -30,6 +30,7 @@ BODY {
 	min-height:100vh;
 	width:auto;
 	box-shadow:0 0 0.5em #222;
+	margin:12px;
 }
 
 .center { text-align:center; }
@@ -57,9 +58,10 @@ BODY {
 .cont {
 	min-height:100%;
 	min-height:100vh;
-	padding:100px 6%;
+	padding:108px 6%;
 	box-sizing:border-box;
 }
+.tabs + .cont { padding-top:150px; }
 
 .links A, .links .dd, .links .sub { font-size:24px; }
 .links {
@@ -105,7 +107,7 @@ NAV A {
 	box-sizing:border-box;
 	padding:8px;
 }
-NAV A:hover { border-color:#105CA2; }
+NAV A:hover, NAV A[T] { border-color:#105CA2; }
 NAV .menu {
 	position:relative;
 	font-size:18px;
@@ -136,9 +138,46 @@ FOOTER {
 	box-shadow:inset 0 0 0.25em black;
 }
 
+.tabs {
+	position:absolute;
+	top:108px;
+	left:0;
+	right:0;
+	height:auto;
+	background:#105CA2;
+	box-shadow:inset 0 0 0.11em #222;
+	text-align:left;
+	padding:4px;
+	margin:0 12px;
+	white-space:nowrap;
+	overflow:auto;
+}
+.tabs A {
+	margin:0 8px;
+	padding:4px;
+	color:#fff;
+	text-decoration:none;
+	font-variant:small-caps;
+	font-weight:normal;
+	font-size:1.1em;
+	display:inline-block;
+	min-width:64px;
+	border:1px solid transparent;
+	border-color: transparent white;
+	border-radius:8px;
+	text-align:center;
+	text-transform:capitalize;
+}
+.tabs A:hover, .tabs A[T] {
+	text-decoration:underline;
+}
+
 @media (max-width:960px) {
 	BODY { margin:0; }
 	NAV { height:80px; }
+	.tabs { top:80px; margin:0; }
+	.cont { padding:120px 4%; }
+	.tabs + .cont { padding-top:160px; }
 	NAV .menu {
 		top:0;
 		transform:translateY(0%);
@@ -151,9 +190,10 @@ FOOTER {
 		background-position:right 4px;
 		background-size:contain;
 		min-width:160px;
-    	-webkit-transform: scaleY(-1);
+		-webkit-transform: scaleY(-1);
 		box-sizing:border-box;
 		padding-top:80px;
+		position:static;
 	}
 	NAV .menu A { display:block; clear:both; float:none; _pointer-events:none; -webkit-transform:scaleY(-1); display:none; color:#232A56; }
 	NAV .menu:hover {
@@ -170,4 +210,5 @@ FOOTER {
 	}
 	NAV .menu:hover A { display:block; margin:12px 0; }
 	NAV .menu, NAV .menu:hover { transition:0.1s; }
+	NAV .menu:hover A:hover { background-color:#105CA2; color:#fff; }
 }
