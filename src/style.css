@@ -40,6 +40,7 @@ BODY {
 .cover { background-size:cover !important; }
 .contain { background-size:contain !important; }
 .block { display:block; }
+.j { text-align:justify; }
 
 [left] { float:left; }
 [right] { float:right; }
@@ -61,6 +62,7 @@ BODY {
 	padding:108px 6%;
 	box-sizing:border-box;
 }
+
 .tabs + .cont { padding-top:150px; }
 
 .links A, .links .dd, .links .sub { font-size:24px; }
@@ -182,22 +184,28 @@ FOOTER {
 	display:inline-table;
 	table-layout:fixed;
 }
-.cont TABLE TBODY TR {
+.cont TABLE TR {
 	min-height:10vh;
 }
-.cont TABLE TBODY TD {
+.cont TABLE TH,
+.cont TABLE TD {
 	vertical-align:middle;
 	padding:4px;
 	border:1px solid transparent;
 }
-.cont TABLE TBODY TR TD:hover { border-color:#105CA2; }
-.cont TABLE TBODY TR TD A {
+.cont TABLE TH { font-weight:normal; font-style:italic; }
+.cont TABLE TR TD:hover { border-color:#105CA2; }
+.cont TABLE TR TD A {
 	display:block;
 	padding:16px;
 	text-decoration:none;
 	font-size:1.6em;
 	color:#105CA2;
 }
+.cont .j TABLE { table-layout:initial; width:auto; display:table; }
+.cont .j TABLE TR:hover { background-color:rgba(69,134,198,0.3); }
+.cont .j TABLE TD { border:none; }
+
 @media (max-width:960px) {
 	BODY { margin:0; }
 	NAV { height:80px; }
