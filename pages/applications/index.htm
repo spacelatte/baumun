@@ -62,15 +62,16 @@
 				document.getElementsByClassName('cont')[0].innerHTML = "<iframe src='https:" + forms[e.target.window.location.hash] + "' ></iframe>\n";
 			return;
 		};
-		window.onload = function(e) {
+		function getPage(e) {
 			var req = new XMLHttpRequest();
 			req.onload = function(e) {
 				if(this.status != 200)
 					return;
-				document.getElementsByClassName('cont')[0].innerHTML = this.response;			
+				document.getElementsByClassName('cont')[0].innerHTML = this.response;
 			};
 			req.open("GET","./main.htm",true);
 			req.send(null);
 		};
+		getPage(this);
 	</script>
 </html>

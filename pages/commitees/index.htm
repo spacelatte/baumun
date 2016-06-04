@@ -34,14 +34,66 @@
 			</span>
 		</nav>
 		<div class='tabs' >
-			<a href='./unsc.htm'   >UNSC</a>
-			<a href='./nato.htm'   >NATO</a>
-			<a href='./ec.htm'     >EC</a>
-			<a href='./undp.htm'   >UNDP</a>
-			<a href='./ecosoc.htm' >ECOSOC</a>
-			<a href='./court.htm'  >court</a>
+			<a href='#./unsc.htm'   >UNSC</a>
+			<a href='#./nato.htm'   >NATO</a>
+			<a href='#./ec.htm'     >EC</a>
+			<a href='#./undp.htm'   >UNDP</a>
+			<a href='#./ecosoc.htm' >ECOSOC</a>
+			<a href='#./court.htm'  >court</a>
 		</div>
 		<div class=cont >
+			<br><br>
+			<table>
+				<tbody>
+					<tr>
+						<td><a href='#unsc.htm' >UN Security Council</a></td>
+						<td><a href='#nato.htm' >North Atlantic Treaty Organization</a></td>
+					</tr>
+					<tr>
+						<td><a href='#ec.htm'   >European Council</a></td>
+						<td><a href='#undp.htm' >United Nations Development Programme</a></td>
+					</tr>
+					<tr>
+						<td><a href='#ecosoc.htm' >Economic &amp; Social Council</a></td>
+						<td><a href='#court.htm'  >Court Configuration</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<footer class="contact" >
+			&copy; BAU&nbsp;MUN &#39;16
+		</footer>
+	</body>
+	<script type="text/javascript" src="../../lib/jquery-2.2.0.min.js" ></script>
+	<script type="text/javascript" src="../../page.js" ></script>
+	<script >
+		var  links = Array.prototype.slice.call(document.getElementsByClassName('tabs')[0].getElementsByTagName('A'));
+		var mlinks = Array.prototype.slice.call(document.getElementsByClassName('cont')[0].getElementsByTagName('A'));
+		links = links.concat(mlinks);
+		for(i=0;i<links.length;i++) {
+			links[i].onclick = function(e) {
+				for(j=0;j<links.length;j++)
+					links[j].removeAttribute("T");
+				this.setAttribute("T","");
+				if( links.indexOf(this) >= mlinks.length )
+					links[ mlinks.indexOf(this) ].setAttribute("T","");
+				var req = new XMLHttpRequest();
+				req.onload = function(e) {
+					if(this.status != 200)
+						return;
+					document.getElementsByClassName('cont')[0].innerHTML = this.response;	
+				};
+				req.open("GET",this.hash.slice(1),true);
+				req.send(null);
+				return false;
+			};
+			continue;
+		};
+	</script>
+</html>
+
+
+<!--
 			click one of the links listed above
 		</div>
 		<footer class="contact" >
@@ -50,5 +102,25 @@
 	</body>
 	<script type="text/javascript" src="../../lib/jquery-2.2.0.min.js" ></script>
 	<script type="text/javascript" src="../../page.js" ></script>
-	<script></script>
+	<script>
+		var  links = document.getElementsByClassName('tabs')[0].getElementsByTagName('A');
+		for(i=0;i<links.length;i++) {
+			links[i].onclick = function(e) {
+				for(j=0;j<links.length;j++)
+					links[j].removeAttribute("T");
+				this.setAttribute("T","");
+				var req = new XMLHttpRequest();
+				req.onload = function(e) {
+					if(this.status != 200)
+						return;
+					document.getElementsByClassName('cont')[0].innerHTML = this.response;	
+				};
+				req.open("GET",this.hash.slice(1),true);
+				req.send(null);
+				return;
+			};
+			continue;
+		};
+	</script>
 </html>
+-->
