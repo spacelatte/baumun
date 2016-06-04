@@ -171,6 +171,12 @@ FOOTER {
 .tabs A:hover, .tabs A[T] {
 	text-decoration:underline;
 }
+.cont IFRAME {
+	width:100%;
+	min-height:100vh;
+	display:inline-block;
+	border:none;
+}
 
 @media (max-width:960px) {
 	BODY { margin:0; }

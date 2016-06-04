@@ -49,5 +49,16 @@
 	</body>
 	<script type="text/javascript" src="../../lib/jquery-2.2.0.min.js" ></script>
 	<script type="text/javascript" src="../../page.js" ></script>
-	<script></script>
+	<script>
+		forms = {
+			"#pc":"//docs.google.com/forms/d/1UK0ShjjBlroWRPF2umHuh3evWfak1NjeHOosq3lLi-8/edit?ts=5750aee1",
+			"#as":"//docs.google.com/forms/d/1yX0eqhdffjqDyxZpC-i25b4qVq1RgiWSUG0K-RArgZw/edit?ts=5750af02",
+			"#d3":"//docs.google.com/forms/d/1g71bnEXp8ogIZPEhMN7-z-piUBjVuwKzY4ZJYy0xv7g/edit?ts=5750af19",
+			"#cd":"//docs.google.com/forms/d/1kpY7RYQkGkETONvbS6JwMDFYTg9n3pcuGsO-RI1Et3U/edit?ts=5750af46",
+			"#id":"//docs.google.com/forms/d/1V4nCu1GOCFPB22323HMmWUYjEf9kBbbiJa8QpHD0Os0/edit?ts=5750af56",
+		};
+		window.onhashchange = function(e) {
+			document.getElementsByClassName('cont')[0].innerHTML = "<iframe src='https:" + forms[e.target.window.location.hash] + "' ></iframe>\n";
+		};
+	</script>
 </html>
