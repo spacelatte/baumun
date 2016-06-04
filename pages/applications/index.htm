@@ -67,7 +67,7 @@
 			req.onload = function(e) {
 				if(this.status != 200)
 					return;
-				document.getElementsByClassName('cont')[0].innerHTML = "<span class=j >\n"+this.response+"</span>\n";
+				document.getElementsByClassName('cont')[0].innerHTML = "<span class='' >\n"+this.response+"</span>\n";
 			};
 			req.open("GET","./main.htm",true);
 			req.send(null);
