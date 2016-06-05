@@ -231,7 +231,7 @@ FOOTER {
 		position:static;
 	}
 	NAV .menu A { display:block; clear:both; float:none; _pointer-events:none; -webkit-transform:scaleY(-1); display:none; color:#232A56; }
-	NAV .1menu:active,
+	NAV .menu:active,
 	NAV .menu:hover {
 		height:auto;
 		width:100%;
@@ -244,13 +244,13 @@ FOOTER {
 		padding-bottom:80px;
 		box-shadow:0 0 0.3em black;
 	}
-	NAV .1menu:active,
+	NAV .menu:active A,
 	NAV .menu:hover A { display:block; margin:12px 0; }
 	
-	NAV .1menu:active,
+	NAV .menu:active,
 	NAV .menu,
 	NAV .menu:hover { transition:0.1s; }
 	
-	NAV .1menu:active A:hover,
+	NAV .menu:active A:hover,
 	NAV .menu:hover A:hover { background-color:#105CA2; color:#fff; }
 }
