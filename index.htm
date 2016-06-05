@@ -49,6 +49,7 @@
 			tleft = (target-(Date.now()));
 			if(tleft < 0)
 				return document.getElementById("t").style.display = "none";
+			document.getElementById("t").style.transform = "translateX("+Math.floor(Math.random()*(30)-15)+"px)";
 			ms = parseInt(tleft%1000);
 			sec = parseInt(tleft/1000)%60;
 			min = parseInt(tleft/60000)%60;

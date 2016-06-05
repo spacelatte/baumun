@@ -202,7 +202,7 @@ FOOTER {
 	font-size:1.6em;
 	color:#105CA2;
 }
-.cont H1 { font-weight:normal; font-size:3.3em; color:#105CA2; }
+.cont H1 { font-weight:normal; font-size:3.3em; color:#105CA2; transition:0.1s; }
 .cont .j TABLE { table-layout:initial; width:auto; display:table; border-collapse:collapse; }
 .cont .j TABLE TR:hover { background-color:rgba(69,134,198,0.3); }
 .cont .j TABLE TD { border:none; }
