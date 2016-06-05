@@ -165,7 +165,7 @@ FOOTER {
 	display:inline-block;
 	min-width:64px;
 	border:1px solid transparent;
-	border-color: transparent white;
+	_border-color: transparent white;
 	border-radius:8px;
 	text-align:center;
 	text-transform:capitalize;
