@@ -82,6 +82,7 @@
 					if(this.status != 200)
 						return;
 					document.getElementsByClassName('cont')[0].innerHTML = "<span class=j >\n"+this.response+"</span>\n";
+					fix_images();
 				};
 				req.open("GET",this.hash.slice(1),true);
 				req.send(null);
