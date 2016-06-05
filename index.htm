@@ -34,13 +34,27 @@
 			</span>
 		</nav>
 		<div class=cont >
-			main page
+			<h1 id=t >0.0.0.0</h1>
 		</div>
 		<footer class="contact" >
 			&copy; BAU&nbsp;MUN &#39;16
 		</footer>
 	</body>
 	<script type="text/javascript" src="./lib/jquery-2.2.0.min.js" ></script>
+	<script type="text/javascript" src="./sprintf.min.js" ></script>
 	<script type="text/javascript" src="./page.js" ></script>
-	<script></script>
+	<script>
+		var target = 1470355200000;
+		setInterval(function() {
+			tleft = (target-(Date.now()));
+			if(tleft < 0)
+				return document.getElementById("t").style.display = "none";
+			ms = parseInt(tleft%1000);
+			sec = parseInt(tleft/1000)%60;
+			min = parseInt(tleft/60000)%60;
+			hrs = parseInt(tleft/3600000)%24;
+			days = parseInt(tleft/86400000);
+			document.getElementById("t").innerHTML = sprintf("%02d:%02d:%02d:%02d:%02d",days,hrs,min,sec,ms/10);
+	},1);	
+	</script>
 </html>
