@@ -22,3 +22,8 @@ push pull:
 	git $@
 
 # curl -X POST -s --data-urlencode 'input@ready.js' https://javascript-minifier.com/raw > ready.min.js
+
+page.js:
+	cat src/*.js > page.js
+
+.PHONY: page.js
