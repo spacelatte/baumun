@@ -59,7 +59,7 @@
 		};
 		window.onhashchange = function(e) {
 			if(e.target.window.location.hash)
-				document.getElementsByClassName('cont')[0].innerHTML = "<iframe src='https:" + forms[e.target.window.location.hash] + "' ></iframe>\n";
+				document.getElementsByClassName('cont')[0].innerHTML = "<iframe src='" + forms[e.target.window.location.hash] + "' ></iframe>\n";
 			return;
 		};
 		function getPage(e) {
