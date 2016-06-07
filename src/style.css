@@ -272,7 +272,7 @@ FOOTER {
 	NAV .opn,
 	_NAV .menu:active,
 	NAV .menu,
-	_NAV .menu:hover { transition:0.1s; }
+	_NAV .menu:hover { transition:0s, width 0.1s, height 0.1s, padding 0.1s, transform 0.1s; }
 
 	NAV .opn A:hover,
 	_NAV .menu:active A:hover,
