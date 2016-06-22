@@ -30,7 +30,7 @@
 				<a href='../../pages/information' T >INFORMATION</a>
 				<a href='../../pages/applications'  >APPLICATIONS</a>
 				<a href='../../pages/commitees'     >COMMITTEES</a>
-				<a href='../../pages/2k16.htm'      >BAUMUN &#39;16</a>
+				<a href='../../index.htm'      >BAUMUN &#39;16</a>
 			</span>
 		</nav>
 		<div class='tabs' >
@@ -39,7 +39,7 @@
 			<a href='#./acc.htm'      >accomodation</a>
 			<a href='#./schedule.htm' >schedule</a>
 			<a href='#./tp.htm'       >transportation</a>
-			<a href='#./venue.htm'    >venues</a>
+			<a href='#./venue.htm'    >bahcesehir university</a>
 			<a href='#./payment.htm'  >payment details</a>
 		</div>
 		<div class=cont >
@@ -71,27 +71,6 @@
 	<script type="text/javascript" src="../../lib/jquery-2.2.0.min.js" ></script>
 	<script type="text/javascript" src="../../page.js" ></script>
 	<script >
-		var  links = Array.prototype.slice.call(document.getElementsByClassName('tabs')[0].getElementsByTagName('A'));
-		var mlinks = Array.prototype.slice.call(document.getElementsByClassName('cont')[0].getElementsByTagName('A'));
-		links = links.concat(mlinks);
-		for(i=0;i<links.length;i++) {
-			links[i].onclick = function(e) {
-				for(j=0;j<links.length;j++)
-					links[j].removeAttribute("T");
-				this.setAttribute("T","");
-				if( links.indexOf(this) >= mlinks.length )
-					links[ mlinks.indexOf(this) ].setAttribute("T","");
-				var req = new XMLHttpRequest();
-				req.onload = function(e) {
-					if(this.status != 200)
-						return;
-					document.getElementsByClassName('cont')[0].innerHTML = "<span class=j >\n"+this.response+"</span>\n";
-				};
-				req.open("GET",this.hash.slice(1),true);
-				req.send(null);
-				return false;
-			};
-			continue;
-		};
+	blabla();
 	</script>
 </html>
