@@ -1,9 +1,9 @@
 window.onload = function() {
 	fix_images();
 	fix_links();
-	footer = document.getElementsByTagName("footer")[0];
-	footer.innerHTML += window.atob("PGJyPgo8c3BhbiBzdHlsZT0nZm9udC1zaXplOjAuNWVtOyc+ZGV2ZWxvcG1lbnQgJmFtcDsgZGVzaWduOiBtZXJ0IGFrZW5naW48L3NwYW4+Cg==");
+	document.getElementsByClassName("contact")[0].innerHTML += "<br>\n<a href='malto:info@baumun.org' >info@baumun.org</a>\n";
 	document.getElementsByTagName("nav")[0].getElementsByClassName("menu")[0].addEventListener('click',function(e) { $(this).toggleClass("opn"); });
+	document.getElementsByTagName("footer")[0].innerHTML += window.atob("PGJyPgo8c3BhbiBzdHlsZT0nZm9udC1zaXplOjAuNWVtOyc+ZGV2ZWxvcG1lbnQgJmFtcDsgZGVzaWduOiBtZXJ0IGFrZW5naW48L3NwYW4+Cg==");
 	return;
 }
 

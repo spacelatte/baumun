@@ -283,3 +283,6 @@ FOOTER {
 	_NAV .menu:active A:hover,
 	_NAV .menu:hover A:hover { background-color:#105CA2; color:#fff; }
 }
+.contact A {
+	color:white;
+}
