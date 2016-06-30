@@ -211,6 +211,7 @@ FOOTER {
 .cont .j TABLE { table-layout:initial; width:auto; display:table; border-collapse:collapse; }
 .cont .j TABLE TR:hover { background-color:rgba(69,134,198,0.3); }
 .cont .j TABLE TD { border:none; }
+.cont .j TABLE TD[colspan] { font-weight:normal; }
 .cont .j H1 {
 	color:white;
 	background:gray;
