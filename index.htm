@@ -57,7 +57,9 @@
 			min = parseInt(tleft/60000)%60;
 			hrs = parseInt(tleft/3600000)%24;
 			days = parseInt(tleft/86400000);
-			document.getElementById("t").innerHTML = sprintf("%02d:%02d:%02d:%02d:%02d",days,hrs,min,sec,ms/10);
-	},1);	
+			sep = ":";
+		//	if(parseInt(ms/100)%2 == 0) sep = " ";
+			document.getElementById("t").innerHTML = sprintf("%02d%s%02d%s%02d%s%02d%s%02d",days,sep,hrs,sep,min,sep,sec,sep,ms/10);
+	},1);
 	</script>
 </html>
