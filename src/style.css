@@ -294,6 +294,25 @@ FOOTER {
 	background-clip:content-box;
 }
 
+.ateam {
+	display:block;
+	width:100%;
+	height:auto;
+	text-align:center;
+}
+.ateam SPAN {
+	display:inline-block;
+	white-space:pre-wrap;
+	width:calc(50% - 10px);
+	text-align:center;
+	box-sizing:border-box;
+	padding:16px;;
+}
+.ateam span:nth-child(even) {
+}
+.ateam span:nth-child(odd) {
+}
+
 @keyframes fade {
 	from { opacity:0.0; }
 	to { opacity:1.0; }
