@@ -287,3 +287,14 @@ FOOTER {
 .contact A {
 	color:white;
 }
+
+.mbg {
+	background-size:contain;
+	background-attachment:local;
+	background-clip:content-box;
+}
+
+@keyframes fade {
+	from { opacity:0.0; }
+	to { opacity:1.0; }
+}

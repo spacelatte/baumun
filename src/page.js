@@ -31,6 +31,7 @@ function blabla() {
 			};
 			req.open("GET",this.hash.slice(1),true);
 			req.send(null);
+//			document.body.children[2].style.animation = "fade 1s";
 			return false;
 		};
 		continue;
